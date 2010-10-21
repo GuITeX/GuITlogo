@@ -1,0 +1,161 @@
+GuIT.sty
+========
+
+Il pacchetto guit.sty fornisce alcuni comandi utili per scrivere
+correttamente il logo del "Gruppo Utilizzatori Italiani di TeX" usando il
+colore di default del testo oppure un colore qualunque selezionabile
+dall'utente, secondo lo schema del logo presente sul sito del Gruppo
+(http://www.guit.sssup.it). Sono altresì presenti comandi che facilitano la
+scrittura dell'espansione completa dell'acronimo GuIT, degli indirizzi del
+sito internet del Gruppo e del forum pubblico, del logo del convegno
+GuITmeeting e della rivista Ars TeXnica. Opzionalmente, tramite l'uso di
+hyperref, i prodotti dei comandi appena citati possono diventare
+collegamenti ipertestuali al sito del Gruppo (http://www.guit.sssup.it).
+
+[ The guit.sty package provides some commands useful to correctly write the
+  logo of "Gruppo Utilizzatori Italiani di TeX" (Italian TeX User Group),
+  using the default document color or any other color the user may ever
+  choose, in conformity with logo's scheme as seen on the Group site
+  (http://www.guit.sssup.it). Likewise, commands are available that simplify
+  the writing of GuIT acronym's complete expansion, of the addresses of
+  Group's internet site and public forum, the meeting GuITmeeting and
+  magazine Ars TeXnica's logo. Optionally, using hyperref, the outputs of
+  the above cited commands can become hyperlinks to Group's site
+  (http://www.guit.sssup.it).
+
+  Documentation available in Italian only.]
+
+
+Modifiche nella versione 0.9.1 (2009/07/31)
+o Disabilitato il caricamento automatico di hyperref (richiesta e codice ad
+  opera di Enrico Gregorio)
+
+Modifiche nella versione 0.9 (2006/05/24)
+o Molti comandi ora possono usare "chiavi" definite tramite xkeyval (ricorda
+  molto ConTeXt) e presentano nuove funzionalità
+o Nuovo comando: \setupGuIT
+o Rimosso \swapGuITcommands
+o xcolor è diventato obbligatorio
+o Nuovo comando: \GuITtextEn
+o Nuovo "stile" di composizione per \GuITmeeting
+o \GuIT può essere composto anche con \bfseries per la quasi totalità dei
+  font supportati
+o Incorporati i comandi per il logo di Ars TeXnica
+
+Modifiche nella versione 0.8.2 (2005/04/08)
+o Aggiunto il file di configurazione esterno
+o Nuovo comando: \DeclareGuITLogoCommand
+o Alterato il colore di default
+
+Modifiche nella versione 0.8.1 (2004/11/15)
+o Aggiunta l'indicazione dell'encoding da utilizzare nelle macro
+  \@guit@meeting@color@on e \@guit@meeting@color@off per evitare problemi
+  nel caso sia attivo un encoding diverso da quello di default
+
+Modifiche nella versione 0.8 (2004/10/28)
+o Aggiunto un nuovo parametro opzionale a \GuIT per indicare l'utilizzo di
+  una famiglia di font diversa da quella corrente
+
+Modifiche nella versione 0.7.5 (2004/10/17)
+o Ri-corrette le macro \@guit@meeting@color@on e \@guit@meeting@color@off
+  (sperando che questa sia la volta buona!)
+
+Modifiche nella versione 0.7.4 (2004/10/15)
+o Corrette le macro \@guit@meeting@color@on e \@guit@meeting@color@off
+
+Modifiche nella versione 0.7.3 (2004/10/12)
+o Apportati alcuni aggiustamenti ai coefficienti di traslazione delle
+  componenti del logo
+o Nuova macro \GuITmeeting
+
+Modifiche nella versione 0.7.2 (mai rilasciata)
+o Aggiornata la documentazione ed i riferimenti a xcolor
+o Nuova macro \GuITforum
+
+Modifiche nella versione 0.7.1 (mai rilasciata)
+o Semplificata la creazione di alcune macro interne
+
+Modifiche nella versione 0.7 (2003/10/17)
+o Rimossi tutti gli usi del font Utopia dal file di test
+o Integrato l'uso di hyperref: ora ogni occorrenza del logo può essere un
+  link a sito di GuIT
+o Nuova macro \GuITurl per scrivere correttamente l'indirizzo del sito di
+  GuIT
+o Modificata la semantica dell'opzione color per forzare la colorazione di
+  ogni occorrenza del logo
+
+Modifiche nella versione 0.6 (2003/09/16)
+o Nel file di test la "rosetta" è stata trasformata in una coloratissima
+  spirale stiracchiata
+o Nuova macro \swapGuITcommands
+o Integrato l'uso opzionale di xcolor
+
+Modifiche nella versione 0.5 (2003/09/04)
+o Aggiunta la gestione del colore per il logo
+
+Modifiche nella versione 0.4 (2003/07/15)
+o Aggiunta una "rosetta" di GuIT al file di test
+o Corretto il testo prodotto da \GuITtext
+
+Modifiche nella versione 0.3 (2003/06/12)
+o Corretta la macro \@guitcmr
+
+Modifiche nella versione 0.2 (2003/02/21)
+o Trasferito il copyright al Gruppo Utilizzatori Italiani di TeX
+o Ampliato il file di test
+o Nuova macro \GuITtext
+o Corretti alcune stupide sviste
+
+Modifiche nella versione 0.1 (2003/02/15)
+o Prima release del pacchetto
+
+-------------------------------------------------------------------
+  Author: Emanuele Vicentini
+          (emanuelevicentini at yahoo dot it)
+
+  Copyright 2003, 2004, 2005, 2006, 2009 Gruppo Utilizzatori Italiani di TeX
+
+  This work may be distributed and/or modified under the
+  conditions of the LaTeX Project Public License, either
+  version 1.3a of this license or (at your option) any
+  later version.
+  The latest version of the license is in
+     http://www.latex-project.org/lppl.txt
+
+  This work has the LPPL maintenance status "author-maintained".
+
+  This work consists of the files: README.txt, guit.dtx, guit.ins and the
+  derived files guit.sty, guit.cfg and guittest.tex
+-------------------------------------------------------------------
+
+
+    La distribuzione in questo archivio è composta da:
+README.txt      (questo file)
+guit.{dtx,ins}  Sorgenti e file di installazione del pacchetto
+guit.pdf        La documentazione precompilata in PDF
+guittest.pdf    File di test precompilato in PDF
+
+
+    Per installare il pacchetto:
+o eseguite: latex guit.ins (genererà guit.sty, guit.cfg ed il sorgente del
+  file di test)
+o spostate guit.sty e guit.cfg dove la vostra installazione di LaTeX possa
+  trovarli (nel sottoalbero locale potrebbe essere in tex/latex/GuIT/) ed
+  aggiornate il database o l'analoga struttura dati usata dalla vostra
+  distribuzione di LaTeX (maggiori informazioni su http://www.guit.sssup.it)
+
+    Per rigenerare la documentazione:
+o eseguite: latex guit.dtx (due volte)
+o eseguite: makeindex -s gind.ist guit
+o eseguite: makeindex -s gglo.ist -o guit.gls guit.glo
+o eseguite: latex guit.dtx
+o stampate guit.dvi per avere la documentazione del pacchetto
+
+    Per rigenerare il file di test avrete bisogno dei pacchetti booktabs,
+geometry, guit e rotating, oltre alla dotazione standard di font Type1
+fornita dal bundle PSNFSS.
+
+
+31 luglio 2009
+Emanuele Vicentini
+(emanuelevicentini at yahoo dot it)
