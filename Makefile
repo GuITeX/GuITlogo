@@ -1,7 +1,7 @@
 PACKAGE = guit
 EXAMPLE = guittest
 
-FILE = README.txt $(addsuffix .dtx,$(PACKAGE)) $(addsuffix .ins,$(PACKAGE)) \
+FILE = README $(addsuffix .dtx,$(PACKAGE)) $(addsuffix .ins,$(PACKAGE)) \
 	$(addsuffix .pdf,$(PACKAGE)) $(addsuffix .pdf,$(EXAMPLE))
 
 DIRECTORY = GuITlogo
