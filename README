@@ -110,9 +110,6 @@ Modifiche nella versione 0.1 (2003/02/15)
 o Prima release del pacchetto
 
 -------------------------------------------------------------------
-  Author: Emanuele Vicentini
-          (emanuelevicentini at yahoo dot it)
-
   Copyright 2003, 2004, 2005, 2006, 2009 Gruppo Utilizzatori Italiani di TeX
 
   This work may be distributed and/or modified under the
@@ -122,7 +119,12 @@ o Prima release del pacchetto
   The latest version of the license is in
      http://www.latex-project.org/lppl.txt
 
-  This work has the LPPL maintenance status "author-maintained".
+  Author: Emanuele Vicentini
+          (emanuelevicentini at yahoo dot it)
+
+  This work has the LPPL maintenance status "maintained".
+
+  The Current Maintainer of this work is Emanuele Vicentini.
 
   This work consists of the files: README, guit.dtx, guit.ins and the
   derived files guit.sty, guit.cfg and guittest.tex
