@@ -5,23 +5,23 @@ Il pacchetto guit.sty fornisce alcuni comandi utili per scrivere
 correttamente il logo del "Gruppo Utilizzatori Italiani di TeX" usando il
 colore di default del testo oppure un colore qualunque selezionabile
 dall'utente, secondo lo schema del logo presente sul sito del Gruppo
-(http://www.guit.sssup.it). Sono altresì presenti comandi che facilitano la
+(http://www.guitex.org). Sono altresì presenti comandi che facilitano la
 scrittura dell'espansione completa dell'acronimo GuIT, degli indirizzi del
 sito internet del Gruppo e del forum pubblico, del logo del convegno
 GuITmeeting e della rivista Ars TeXnica. Opzionalmente, tramite l'uso di
 hyperref, i prodotti dei comandi appena citati possono diventare
-collegamenti ipertestuali al sito del Gruppo (http://www.guit.sssup.it).
+collegamenti ipertestuali al sito del Gruppo (http://www.guitex.org).
 
 [ The guit.sty package provides some commands useful to correctly write the
   logo of "Gruppo Utilizzatori Italiani di TeX" (Italian TeX User Group),
   using the default document color or any other color the user may ever
   choose, in conformity with logo's scheme as seen on the Group site
-  (http://www.guit.sssup.it). Likewise, commands are available that simplify
+  (http://www.guitex.org). Likewise, commands are available that simplify
   the writing of GuIT acronym's complete expansion, of the addresses of
   Group's internet site and public forum, the meeting GuITmeeting and
   magazine Ars TeXnica's logo. Optionally, using hyperref, the outputs of
   the above cited commands can become hyperlinks to Group's site
-  (http://www.guit.sssup.it).
+  (http://www.guitex.org).
 
   Documentation available in Italian only.]
 
@@ -144,7 +144,7 @@ o eseguite: latex guit.ins (genererà guit.sty, guit.cfg ed il sorgente del
 o spostate guit.sty e guit.cfg dove la vostra installazione di LaTeX possa
   trovarli (nel sottoalbero locale potrebbe essere in tex/latex/GuIT/) ed
   aggiornate il database o l'analoga struttura dati usata dalla vostra
-  distribuzione di LaTeX (maggiori informazioni su http://www.guit.sssup.it)
+  distribuzione di LaTeX (maggiori informazioni su http://www.guitex.org)
 
     Per rigenerare la documentazione:
 o eseguite: latex guit.dtx (due volte)
