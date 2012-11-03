@@ -93,6 +93,7 @@ attuale.
 Font & Logo \\
 \midrule
 Computer Modern Roman & \guit[family=cmr] \\
+Latin Modern & \guit[family=lmr] \\
 Times New Roman & \guit[family=ptm] \\
 Palatino & \guit[family=ppl] \\
 NewCentury Schoolbook & \guit[family=pnc] \\
@@ -107,7 +108,7 @@ Per finire, un sfilza di \guit:
 \begingroup
   \let\pippo\par
   \makeatletter
-  \@tfor\famiglia:={cmr}{ptm}{ppl}{pnc}{bch}{pbk}\do{%
+  \@tfor\famiglia:={cmr}{lmr}{ptm}{ppl}{pnc}{bch}{pbk}\do{%
     \noindent
     \setupGuIT[family=\famiglia]
     \@tfor\dimensione:=\tiny\scriptsize\footnotesize\small\normalsize
@@ -126,7 +127,7 @@ Per finire, un sfilza di \guit:
 % 
 % 
 % 
-% \CheckSum{538}
+% \CheckSum{544}
 % 
 % \CharacterTable
 %   {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -180,6 +181,7 @@ Per finire, un sfilza di \guit:
 %   la serie \altro{bx}}
 % \changes{v0.9}{2005/12/03}{Nel file di test ora viene impostata
 %   globalmente la chiave \altro{link}}
+% \changes{v1.0.0}{2012/11/03}{Aggiunto il supporto per Latin Modern}
 % 
 % 
 % 
@@ -234,6 +236,7 @@ Per finire, un sfilza di \guit:
 % \itshape Font & \normalfont\itshape Famiglia & \itshape Bx & \itshape Provenienza \\
 % \midrule
 % Computer Modern Roman & cmr & No & \normalfont Standard \\
+% Latin Modern & lmr & S\`\i\footnote{In realt\`a viene usata solo la serie \altro{m}.} & lm \\
 % Times & ptm & S\`\i & psnfss \\
 % Palatino & ppl & S\`\i & psnfss \\
 % New Century Schoolbook & pnc & S\`\i & psnfss \\
@@ -262,13 +265,7 @@ Per finire, un sfilza di \guit:
 % L'idea di utilizzare la codifica \altro{T1} per la famiglia Computer
 % Modern (perch\'e esiste il font \altro{T1/cmr/bx/sc}) \`e stata scartata a
 % priori perch\'e i font in formato Type1 di tale famiglia non sono ancora,
-% a mio parere, sufficientemente diffusi. Per quanto riguarda la famiglia
-% Latin Modern, non vi sar\`a alcun supporto per il suo utilizzo fino a
-% quando non avr\`a raggiunto la completa stabilit\`a, ma, se siete disposti
-% a correre qualche rischio, potete aggiungere la dichiarazione appropriata
-% per la famiglia \altro{lmr} nel file di configurazione del pacchetto
-% (vedere \S\ref{sec:config}) utilizzando i parametri impiegati per i font
-% Computer Modern.
+% a mio parere, sufficientemente diffusi.
 % 
 % 
 % 
@@ -800,7 +797,7 @@ Per finire, un sfilza di \guit:
 %    \begin{macrocode}
 %<*style>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{guit}[2012/08/17 v0.9.2 Logo del GuIT]
+\ProvidesPackage{guit}[2012/11/03 v1.0.0-alpha.1 Logo del GuIT]
 \RequirePackage{graphics, url}
 \RequirePackage{xcolor}[2004/07/04]
 \RequirePackage{xkeyval}[2005/05/07]
@@ -1078,6 +1075,15 @@ Per finire, un sfilza di \guit:
 \define@key{guit}{cmr/m}[cmr/m]{%
   \def\@guit@family{cmr}%
   \def\@guit@series{m}}
+%    \end{macrocode}
+% \end{macro}
+% 
+% \begin{macro}{\@guitlmrm}
+% Questa macro viene utilizzata se l'utente usa il font Latin Modern.
+%    \begin{macrocode}
+\@gen@guit@fntcmd{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}
+\AliasGuITLogoCommand{lmr}{b}{lmr}{m}
+\AliasGuITLogoCommand{lmr}{bx}{lmr}{m}
 %    \end{macrocode}
 % \end{macro}
 % 
@@ -1507,6 +1513,9 @@ Per finire, un sfilza di \guit:
 \ProvidesFile{guit.cfg}[2009/07/31 v0.9.1 File di configurazione di guit.sty]
 %% Esempi:
 %% \GuITcolor{1, 0, 1, 0.6}
+%% \DeclareGuITLogoCommand{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}
+%% \AliasGuITLogoCommand{lmr}{b}{lmr}{m}
+%% \AliasGuITLogoCommand{lmr}{bx}{lmr}{m}
 %% \DeclareGuITLogoCommand{ptm}{-0.27em}{0.5475ex}{-0.125em}{-0.125em}
 %% \DeclareGuITLogoCommand{ptm}[bx]{-0.345em}{0.68ex}{-0.125em}{-0.125em}
 %% \DeclareGuITLogoCommand{ppl}{-0.276em}{0.717ex}{-0.125em}{-0.125em}
