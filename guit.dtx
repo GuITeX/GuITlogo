@@ -127,7 +127,7 @@ Per finire, un sfilza di \guit:
 % 
 % 
 % 
-% \CheckSum{553}
+% \CheckSum{547}
 % 
 % \CharacterTable
 %   {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -731,7 +731,6 @@ Per finire, un sfilza di \guit:
 % breve e si tratta di pacchetti fondamentali oppure estremamente comuni:
 % 
 % \begin{itemize}
-% \item \pacchetto{hyperref};
 % \item \pacchetto{graphics};
 % \item \pacchetto{url};
 % \item \pacchetto{xcolor}, versione 2.00 o successive;
@@ -758,6 +757,9 @@ Per finire, un sfilza di \guit:
 % d'errore che menzionano i pacchetti elencati in precedenza alterate
 % l'ordine di caricamento dei pacchetti nel vostro documento in modo che
 % questo pacchetto si trovi dopo quello indicato dai messaggi.
+% 
+% Se utilizzate \pacchetto{fontspec}, dovete caricarlo \emph{prima} di questo
+% pacchetto.
 % 
 % 
 % 
@@ -792,8 +794,6 @@ Per finire, un sfilza di \guit:
 %   \`e stato definitivamente rimosso}
 % \changes{v0.9.1}{2009/07/31}{\pacchetto{hyperref} non viene pi\`u caricato
 %   automaticamente; suggerimento e codice di Enrico Gregorio}
-% \changes{v1.0.0}{2012/11/13}{Introdotta la dipendenza dal pacchetto
-%   \pacchetto{ifxetex}}
 % Richiediamo espressamente l'uso di \LaTeXe, ci annunciamo al mondo e
 % carichiamo tutti i pacchetti necessari.
 %    \begin{macrocode}
@@ -801,7 +801,6 @@ Per finire, un sfilza di \guit:
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{guit}[2012/11/03 v1.0.0-alpha.1 Logo del GuIT]
 \RequirePackage{graphics, url}
-\RequirePackage{ifxetex}[2006/08/21]
 \RequirePackage{xcolor}[2004/07/04]
 \RequirePackage{xkeyval}[2005/05/07]
 %    \end{macrocode}
@@ -1084,11 +1083,9 @@ Per finire, un sfilza di \guit:
 % \begin{macro}{\@guitlmrm}
 % Questa macro viene utilizzata se l'utente usa il font Latin Modern.
 %    \begin{macrocode}
-\ifxetex
-\@gen@guit@fntcmd{lmr}{-0.29em}{0.605ex}{-0.125em}{-0.125em}
-\else
-\@gen@guit@fntcmd{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}
-\fi
+\@ifundefined{fontspec}%
+  {\@gen@guit@fntcmd{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}}%
+  {\@gen@guit@fntcmd{lmr}{-0.29em}{0.605ex}{-0.125em}{-0.125em}}
 \AliasGuITLogoCommand{lmr}{b}{lmr}{m}
 \AliasGuITLogoCommand{lmr}{bx}{lmr}{m}
 %    \end{macrocode}
@@ -1520,11 +1517,9 @@ Per finire, un sfilza di \guit:
 \ProvidesFile{guit.cfg}[2012/11/03 v1.0.0-alpha.1 File di configurazione di guit.sty]
 %% Esempi:
 %% \GuITcolor{1, 0, 1, 0.6}
-%% \ifxetex
-%% \DeclareGuITLogoCommand{lmr}{-0.29em}{0.605ex}{-0.125em}{-0.125em}
-%% \else
 %% \DeclareGuITLogoCommand{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}
-%% \fi
+%%%% When using XeLaTeX and fontspec
+%%%% \DeclareGuITLogoCommand{lmr}{-0.29em}{0.605ex}{-0.125em}{-0.125em}
 %% \AliasGuITLogoCommand{lmr}{b}{lmr}{m}
 %% \AliasGuITLogoCommand{lmr}{bx}{lmr}{m}
 %% \DeclareGuITLogoCommand{ptm}{-0.27em}{0.5475ex}{-0.125em}{-0.125em}
