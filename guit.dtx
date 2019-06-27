@@ -1,15 +1,15 @@
 % \iffalse
 % 
 % guit.dtx
-% Copyright 2003, 2004, 2005, 2006, 2009, 2012 Gruppo Utilizzatori Italiani
-% di TeX
+% Copyright 2003, 2004, 2005, 2006, 2009, 2012, 2019 Gruppo Utilizzatori
+% Italiani di TeX
 % 
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either
 % version 1.3a of this license or (at your option) any
 % later version.
 % The latest version of the license is in
-%    http://www.latex-project.org/lppl.txt
+%    https://www.latex-project.org/lppl.txt
 % 
 % Author: Emanuele Vicentini
 %         (emanuelevicentini at yahoo dot it)
@@ -36,7 +36,7 @@
 %</driver>
 % 
 %<*test>
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt, a4paper]{article}
 \usepackage[margin=1in, noheadfoot]{geometry}
 \usepackage{booktabs, guit, rotating, hyperref}
 
@@ -49,7 +49,7 @@ Vediamo un po' come si comporta in una footnote\footnote{\guit~\guit\ldots
 direi che \`e passabile, no?}. Diamoci\footnote{Un'altra nota:
 \fontfamily{pzc}\fontseries{mb}\fontshape{it}\selectfont\guittext} dentro
 con qualche cosa\footnote{Un ultima nota: Copyright 2003, 2004, 2005, 2006,
-2009, 2012 \guittext} di ``strambo'':
+2009, 2012, 2019 \guittext} di ``strambo'':
 
 \begin{center}
 \itshape\guit~agus \TeX~go br\'ach!\\
@@ -797,7 +797,7 @@ Per finire, un sfilza di \guit:
 %    \begin{macrocode}
 %<*style>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{guit}[2012/11/03 v1.0.0-alpha.1 Logo del GuIT]
+\ProvidesPackage{guit}[2019/06/27 v1.0.0-alpha.2 Logo del GuIT]
 \RequirePackage{graphics, url}
 \RequirePackage{xcolor}[2004/07/04]
 \RequirePackage{xkeyval}[2005/05/07]
@@ -820,13 +820,14 @@ Per finire, un sfilza di \guit:
 % 
 % \begin{macro}{\setupGuIT}
 % \changes{v0.9.2}{2012/08/17}{Aggiornato l'indirizzo del sito internet}
+% \changes{v1.0.0}{2012/08/17}{Aggiornato l'indirizzo del sito internet}
 % \begin{macro}{\setupguit}
 % Il comando per gestire le varie chiavi \`e un semplice wrapper alla macro
 % \cs{setkeys*} (ho optato per usare questa macro in quanto non genera alcun
 % messaggio d'errore se le chiavi che riceve in input non esistono nella
 % famiglia sotto esame).
 %    \begin{macrocode}
-\DeclareRobustCommand{\setupGuIT}[1][color=no, link=no, family=, series=, url=http://www.guitex.org, document=, year=, style=display]{%
+\DeclareRobustCommand{\setupGuIT}[1][color=no, link=no, family=, series=, url=https://www.guitex.org, document=, year=, style=display]{%
   \setkeys*{guit}{#1}%
   \ignorespaces}
 \let\setupguit\setupGuIT
@@ -1316,10 +1317,11 @@ Per finire, un sfilza di \guit:
 % \changes{v0.9}{2005/11/27}{Reimplementato usando \cs{GuITurl} ed il nuovo
 %   argomento opzionale; modificato l'indirizzo del forum su suggerimento di
 %   Emiliano Giovanni Vavassori e Maurizio W. Himmelman}
+% \changes{v1.0.0}{2012/08/17}{Aggiornato l'URL del forum}
 % Quanto detto per \cs{GuITurl} vale anche per questo comando.
 %    \begin{macrocode}
 \DeclareRobustCommand*{\GuITforum}[1][]{%
-  \guiturl[#1, document=home/en/forum/index]}
+  \guiturl[#1, document=home/it/forum/index]}
 %    \end{macrocode}
 % \end{macro}
 % 
@@ -1510,7 +1512,7 @@ Per finire, un sfilza di \guit:
 % accidentalmente.
 %    \begin{macrocode}
 %<*cfg>
-\ProvidesFile{guit.cfg}[2012/11/03 v1.0.0-alpha.1 File di configurazione di guit.sty]
+\ProvidesFile{guit.cfg}[2019/06/27 v1.0.0-alpha.2 File di configurazione di guit.sty]
 %% Esempi:
 %% \GuITcolor{1, 0, 1, 0.6}
 %% \DeclareGuITLogoCommand{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}

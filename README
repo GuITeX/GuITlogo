@@ -5,26 +5,31 @@ Il pacchetto guit.sty fornisce alcuni comandi utili per scrivere
 correttamente il logo del "Gruppo Utilizzatori Italiani di TeX" usando il
 colore di default del testo oppure un colore qualunque selezionabile
 dall'utente, secondo lo schema del logo presente sul sito del Gruppo
-(http://www.guitex.org). Sono altresì presenti comandi che facilitano la
+(https://www.guitex.org). Sono altresì presenti comandi che facilitano la
 scrittura dell'espansione completa dell'acronimo GuIT, degli indirizzi del
 sito internet del Gruppo e del forum pubblico, del logo del convegno
 GuITmeeting e della rivista Ars TeXnica. Opzionalmente, tramite l'uso di
 hyperref, i prodotti dei comandi appena citati possono diventare
-collegamenti ipertestuali al sito del Gruppo (http://www.guitex.org).
+collegamenti ipertestuali al sito del Gruppo (https://www.guitex.org).
 
 [ The guit.sty package provides some commands useful to correctly write the
   logo of "Gruppo Utilizzatori Italiani di TeX" (Italian TeX User Group),
   using the default document color or any other color the user may ever
   choose, in conformity with logo's scheme as seen on the Group site
-  (http://www.guitex.org). Likewise, commands are available that simplify
+  (https://www.guitex.org). Likewise, commands are available that simplify
   the writing of GuIT acronym's complete expansion, of the addresses of
   Group's internet site and public forum, the meeting GuITmeeting and
   magazine Ars TeXnica's logo. Optionally, using hyperref, the outputs of
   the above cited commands can become hyperlinks to Group's site
-  (http://www.guitex.org).
+  (https://www.guitex.org).
 
   Documentation available in Italian only.]
 
+Modifiche nella versione 1.0.0-alpha.2 (2019/06/27)
+o Aggiornato l'indirizzo del sito internet del gruppo
+
+Modifiche nella versione 1.0.0-alpha.1 (2012/11/03)
+o Aggiunto il supporto per Latin Modern
 
 Modifiche nella versione 0.9.2 (2012/08/17)
 o Aggiornato l'indirizzo del sito internet
@@ -121,7 +126,7 @@ o Prima release del pacchetto
   version 1.3a of this license or (at your option) any
   later version.
   The latest version of the license is in
-     http://www.latex-project.org/lppl.txt
+     https://www.latex-project.org/lppl.txt
 
   Author: Emanuele Vicentini
           (emanuelevicentini at yahoo dot it)
@@ -148,7 +153,7 @@ o eseguite: latex guit.ins (genererà guit.sty, guit.cfg ed il sorgente del
 o spostate guit.sty e guit.cfg dove la vostra installazione di LaTeX possa
   trovarli (nel sottoalbero locale potrebbe essere in tex/latex/GuIT/) ed
   aggiornate il database o l'analoga struttura dati usata dalla vostra
-  distribuzione di LaTeX (maggiori informazioni su http://www.guitex.org)
+  distribuzione di LaTeX (maggiori informazioni su https://www.guitex.org)
 
     Per rigenerare la documentazione:
 o eseguite: latex guit.dtx (due volte)
