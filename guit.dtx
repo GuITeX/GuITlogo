@@ -741,11 +741,12 @@ Per finire, un sfilza di \guit:
 % \pacchetto{hyperref} non viene pi\`u caricato automaticamente a partire
 % dalla versione 0.9.1.
 % 
-% Tutti gli altri pacchetti vengono caricati senza indicare esplicitamente
-% alcuna opzione, ma questo non significa che ci\`o non possa causarvi
-% problemi: laddove \`e perfettamente lecito tentare di caricare due o pi\`u
-% volte lo stesso pacchetto \emph{con le stesse opzioni}, non \`e possibile
-% farlo cambiando le opzioni, quindi il codice seguente \`e errato:
+% Ad accezione di \pacchetto{url}, tutti gli altri pacchetti vengono
+% caricati senza indicare esplicitamente alcuna opzione, ma questo non
+% significa che ci\`o non possa causarvi problemi: laddove \`e perfettamente
+% lecito tentare di caricare due o pi\`u volte lo stesso pacchetto \emph{con
+% le stesse opzioni}, non \`e possibile farlo cambiando le opzioni, quindi
+% il codice seguente \`e errato:
 % 
 % \begin{verbatim}
 % % ...
@@ -792,13 +793,16 @@ Per finire, un sfilza di \guit:
 %   \`e stato definitivamente rimosso}
 % \changes{v0.9.1}{2009/07/31}{\pacchetto{hyperref} non viene pi\`u caricato
 %   automaticamente; suggerimento e codice di Enrico Gregorio}
+% \changes{v1.0.0}{2019/07/08}{\pacchetto{url} viene caricato con l'opzione
+%   \altro{hyphens}}
 % Richiediamo espressamente l'uso di \LaTeXe, ci annunciamo al mondo e
 % carichiamo tutti i pacchetti necessari.
 %    \begin{macrocode}
 %<*style>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{guit}[2019/06/27 v1.0.0-alpha.2 Logo del GuIT]
-\RequirePackage{graphics, url}
+\ProvidesPackage{guit}[2019/07/08 v1.0.0-alpha.3 Logo del GuIT]
+\RequirePackage{graphics}
+\RequirePackage[hyphens]{url}
 \RequirePackage{xcolor}[2004/07/04]
 \RequirePackage{xkeyval}[2005/05/07]
 %    \end{macrocode}
@@ -1512,7 +1516,7 @@ Per finire, un sfilza di \guit:
 % accidentalmente.
 %    \begin{macrocode}
 %<*cfg>
-\ProvidesFile{guit.cfg}[2019/06/27 v1.0.0-alpha.2 File di configurazione di guit.sty]
+\ProvidesFile{guit.cfg}[2019/07/08 v1.0.0-alpha.3 File di configurazione di guit.sty]
 %% Esempi:
 %% \GuITcolor{1, 0, 1, 0.6}
 %% \DeclareGuITLogoCommand{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}
