@@ -1,0 +1,52 @@
+name: CD
+
+on:
+  push:
+    paths-ignore:
+      - '**/*.pdf'
+  pull_request:
+    paths-ignore:
+      - '**/*.pdf'
+
+env:
+  SOURCE: guit
+  EXAMPLE: guittest
+  BUNDLE: GuITlogo
+
+jobs:
+  build:
+    name: Build & package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Extract package
+        uses: dante-ev/latex-action@v0.2.0
+        with:
+          compiler: tex
+          root_file: ${{ format('{0}.ins', env.SOURCE) }}
+      - name: Prepare extended documentation
+        run: |
+          sed -e 's/\\OnlyDescription//' ${SOURCE}.dtx > fulldoc.dtx
+      - name: Check character table and checksum
+        uses: dante-ev/latex-action@v0.2.0
+        with:
+          compiler: latex
+          root_file: fulldoc.dtx
+      - name: Generate user documentation
+        uses: dante-ev/latex-action@v0.2.0
+        with:
+          root_file: ${{ format('{0}.dtx', env.SOURCE) }}
+      - name: Generate example
+        uses: dante-ev/latex-action@v0.2.0
+        with:
+          root_file: ${{ format('{0}.tex', env.EXAMPLE) }}
+      - name: Collect artifacts
+        run: |
+          rm -rf artifacts
+          mkdir -p artifacts/$BUNDLE
+          mv README ${SOURCE}.dtx ${SOURCE}.ins ${SOURCE}.pdf ${EXAMPLE}.pdf artifacts/$BUNDLE
+      - name: Save artifacts
+        uses: actions/upload-artifact@v1.0.0
+        with:
+          name: ${{ env.BUNDLE }}
+          path: artifacts
