@@ -25,6 +25,9 @@ collegamenti ipertestuali al sito del Gruppo (https://www.guitex.org).
 
   Documentation available in Italian only.]
 
+Modifiche nella versione 1.0.0-alpha.4 (2020/07/03)
+o url viene caricato solo se non è già stato fatto
+
 Modifiche nella versione 1.0.0-alpha.3 (2019/07/08)
 o url viene caricato con l'opzione hyphens
 
@@ -121,7 +124,7 @@ Modifiche nella versione 0.1 (2003/02/15)
 o Prima release del pacchetto
 
 -------------------------------------------------------------------
-  Copyright 2003, 2004, 2005, 2006, 2009, 2012, 2019 Gruppo Utilizzatori
+  Copyright 2003-2006, 2009, 2012, 2019, 2020 Gruppo Utilizzatori
   Italiani di TeX
 
   This work may be distributed and/or modified under the
@@ -170,6 +173,6 @@ geometry, guit e rotating, oltre alla dotazione standard di font Type1
 fornita dal bundle PSNFSS.
 
 
-8 luglio 2019
+3 luglio 2020
 Emanuele Vicentini
 (emanuelevicentini at yahoo dot it)

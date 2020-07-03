@@ -1,7 +1,7 @@
 % \iffalse
 % 
 % guit.dtx
-% Copyright 2003, 2004, 2005, 2006, 2009, 2012, 2019 Gruppo Utilizzatori
+% Copyright 2003-2006, 2009, 2012, 2019, 2020 Gruppo Utilizzatori
 % Italiani di TeX
 % 
 % This work may be distributed and/or modified under the
@@ -48,8 +48,8 @@
 Vediamo un po' come si comporta in una footnote\footnote{\guit~\guit\ldots
 direi che \`e passabile, no?}. Diamoci\footnote{Un'altra nota:
 \fontfamily{pzc}\fontseries{mb}\fontshape{it}\selectfont\guittext} dentro
-con qualche cosa\footnote{Un ultima nota: Copyright 2003, 2004, 2005, 2006,
-2009, 2012, 2019 \guittext} di ``strambo'':
+con qualche cosa\footnote{Un ultima nota: Copyright 2003-2006, 2009, 2012,
+2019, 2020 \guittext} di ``strambo'':
 
 \begin{center}
 \itshape\guit~agus \TeX~go br\'ach!\\
@@ -127,7 +127,7 @@ Per finire, un sfilza di \guit:
 % 
 % 
 % 
-% \CheckSum{544}
+% \CheckSum{546}
 % 
 % \CharacterTable
 %   {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -795,14 +795,16 @@ Per finire, un sfilza di \guit:
 %   automaticamente; suggerimento e codice di Enrico Gregorio}
 % \changes{v1.0.0}{2019/07/08}{\pacchetto{url} viene caricato con l'opzione
 %   \altro{hyphens}}
+% \changes{v1.0.0}{2020/07/03}{\pacchetto{url} viene caricato solo se non
+%   \`e gi\`a stato fatto}
 % Richiediamo espressamente l'uso di \LaTeXe, ci annunciamo al mondo e
 % carichiamo tutti i pacchetti necessari.
 %    \begin{macrocode}
 %<*style>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{guit}[2019/07/08 v1.0.0-alpha.3 Logo del GuIT]
+\ProvidesPackage{guit}[2020/07/03 v1.0.0-alpha.4 Logo del GuIT]
 \RequirePackage{graphics}
-\RequirePackage[hyphens]{url}
+\@ifpackageloaded{url}{}{\RequirePackage[hyphens]{url}}
 \RequirePackage{xcolor}[2004/07/04]
 \RequirePackage{xkeyval}[2005/05/07]
 %    \end{macrocode}
@@ -1516,7 +1518,7 @@ Per finire, un sfilza di \guit:
 % accidentalmente.
 %    \begin{macrocode}
 %<*cfg>
-\ProvidesFile{guit.cfg}[2019/07/08 v1.0.0-alpha.3 File di configurazione di guit.sty]
+\ProvidesFile{guit.cfg}[2020/07/03 v1.0.0-alpha.4 File di configurazione di guit.sty]
 %% Esempi:
 %% \GuITcolor{1, 0, 1, 0.6}
 %% \DeclareGuITLogoCommand{lmr}{-0.26em}{0.714ex}{-0.125em}{-0.125em}
